@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Roboto&display=swap');
+
+
+
+:root
+{
+    --pseudo-bg-color-2:linear-gradient(to bottom, #ffafbd, #ffc3a0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    --pseudo-bg-color-1:linear-gradient(to bottom, #c33764, #1d2671);
+}
+
+*
+{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+.pseudo-underline-1,.pseudo-underline-2
+{
+    position:relative;
+}
+
+.pseudo-underline-1::after,.pseudo-underline-2::after
+{
+    content:'';
+    position: absolute;
+    bottom:0;
+    left:0;
+    border-radius:2px;
+}
+
+.pseudo-underline-1::after
+{
+    height: 0%;
+    width: 100%;
+    bottom: -10%;
+    background: var(--pseudo-bg-color-1);
+    transition:height 0.3s ease-out;
+}
+
+.pseudo-underline-1:hover::after
+{
+    height: 0.3rem;
+}
+
+.pseudo-underline-2::after
+{
+    width: 100%;
+    height: 0.3rem;
+    background: var(--pseudo-bg-color-2);
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+.pseudo-underline-2:hover::after
+{
+    transform: scaleX(1);
+}
+
+.spacing-hover:hover
+{
+    letter-spacing: 1px;
+}
+
+
+
+.flex-row-evenly
+{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+
+

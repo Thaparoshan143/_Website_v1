@@ -1,0 +1,30 @@
+
+:root
+{
+    --Nav-Title:1.4rem;
+    --Nav-Bg:rgba(0,0,0,0.8);
+    --Nav-Title-Color:white;
+    --Nav-Title-Color-Alt:orangered;
+
+}
+
+.Nav
+{
+    padding:1rem;
+    background-color: var(--Nav-Bg);
+}
+
+
+.Nav-Title
+{
+    font-size:var(--Nav-Title);
+    color:var(--Nav-Title-Color);
+    transition:all 0.5s ease-in;
+    cursor:pointer;
+    padding:0.5rem 0.6rem;
+}
+
+.Nav-Title:hover
+{
+    color:var(--Nav-Title-Color-Alt);
+}
