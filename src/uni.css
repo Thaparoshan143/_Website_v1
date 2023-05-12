@@ -1,13 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Castoro+Titling&family=Teko&display=swap');
 
 *{padding:0px;margin:0px;box-sizing:border-box;}
-html{font-size:1rem;scroll-behavior:smooth;font-family: 'Barlow', sans-serif;}
+html{font-size:1rem;scroll-behavior:smooth;font-family: 'Barlow', sans-serif;text-align:center;}
 .flex-row-evenly{display:flex;flex-direction:row;justify-content:space-evenly;align-items:center;}
 .flex-column-evenly{display:flex;flex-direction:column;justify-content:space-evenly;align-items:center;}
 .flex-column-between{display:flex;flex-direction:column;justify-content:space-between;align-items:center;}
 .flex-row-between{display:flex;flex-direction:row;justify-content:space-between;align-items:center;}
 
-:root{--main-theme-color:rgb(119, 19, 156);}
+@media screen and (max-width: 1200px)
+{
+    .flex-column-between,.flex-column-evenly,.flex-row-between,.flex-row-evenly
+    {
+        flex-wrap: wrap;
+    }
+    body{font-size: 0.8rem;}
+}
+
+@media screen and (max-width:800px)
+{
+    body{font-size:0.6rem;}
+}
+
+:root{--main-theme-color:rgb(119, 19, 156);--main-theme-color-a:rgb(119, 19, 156,0.6);}
 
 a{color:black;text-decoration:none};
 .App.light{color:black;background-color:whitesmoke;transition:all 0.5s ease;}
@@ -21,7 +35,7 @@ a{color:black;text-decoration:none};
     bottom:0;
     left:0;
     width: 0%;
-    height:0.5rem;
+    height:0.3rem;
     background-color: var(--main-theme-color);
     border-radius:5px;
     transition:all 0.4s ease-in-out;
@@ -30,4 +44,15 @@ a{color:black;text-decoration:none};
 .pseudo-underline:hover::before
 {
     width:100%;
+}
+
+.titles
+{
+    font-size:3rem;
+    color:var(--main-theme-color);
+}
+
+.info-text
+{
+    color:inherit;
 }

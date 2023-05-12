@@ -7,7 +7,7 @@ function Footer()
 {
 	return(
 		<footer className="Footer flex-row-between">
-			<div className="Socials">
+			<div className="Socials flex-row-evenly">
 				{socialsHandle.map((val)=><button className="tempbtn">{val}</button>)}
 			</div>
 			<span className="Text">@ All Copyright are reserved - 2023</span>

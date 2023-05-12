@@ -1,0 +1,138 @@
+.Skills-Wrapper
+{
+    padding:0.2rem;
+    width:100vw;
+}
+
+.dark .Cards-Wrapper:hover
+{
+    box-shadow:0 0 10px 1px rgba(255,255,255,0.3);
+}
+
+.light .Cards-Wrapper:hover
+{
+    box-shadow:0 0 10px 1px rgba(0,0,0,0.3);
+}
+
+.Cards-Wrapper
+{
+    width:100%;
+    padding:3rem 0.2rem;
+    border-radius:10px;
+    margin:3rem 0;
+    transition:0.4s;
+}
+
+.Cards-Wrapper:hover
+{
+    transform:scale(1.01);
+}
+
+.Cards-Cont
+{
+    width:100%;
+    margin:1rem 0;
+}
+
+.Card
+{
+    min-width: 16rem;
+    min-height: 16rem;
+    max-height: 16rem;
+    border:3px solid var(--main-theme-color);
+    border-radius:20px;
+    transition:0.5s;
+    padding:1rem;
+    margin:1rem;
+}
+
+.Card .Card-Title
+{
+    font-size:4em;
+    color:inherit;
+    font-weight: bolder;
+    display: block;
+}
+
+.Card:hover
+{
+    background-color: var(--main-theme-color-a);
+    transform:scale(1.05);
+    box-shadow: 0 0 10px 1px var(--main-theme-color);
+}
+
+.Cards-Title
+{
+    cursor:default;
+    padding:0 0.5rem;
+    padding-bottom:0.6rem;
+    margin-bottom:4rem;
+    text-transform: uppercase;
+}
+
+.Skill-Pro-Cont
+{
+    margin-top:2rem;
+    width: 70%;
+}
+
+.Progress-Cont
+{
+    width: 100%;
+    margin:1rem 0;
+    border-radius:5px;
+}
+
+.Skill-Pro-Cont .Progress
+{
+    height: 0.5rem;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.dark .Progress-Cont
+{
+    border:1px solid white;
+}
+
+.light .Progress-Cont
+{
+    border:1px solid black;
+}
+
+.dark .Progress
+{
+    background-color: white;
+}
+
+.light .Progress
+{
+    background-color: black;
+}
+
+.Cert-Cont
+{
+    margin-top:4rem;
+    width: 100%;
+    transition:all 1s ease;
+}
+
+.Cards-Wrapper .Text
+{
+    margin:2rem;
+    font-size: 2rem;
+}
+
+.Cert-Img
+{
+    width:20vw;
+    border: 1px solid var(--main-theme-color);
+    transition:0.5s;
+}
+
+.Cert-Img:hover
+{
+    transform:scale(1.05);
+    box-shadow:0 0 15px 3px var(--main-theme-color);
+}
+

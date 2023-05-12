@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import NavBar from "./Components/NavBar";
 import Footer from "./Components/Footer"
 import Home from "./Components/Home"
+import Skills from './Components/Skills';
 import { useState } from 'react';
 
 function App() {
@@ -20,7 +21,8 @@ function App() {
 			<NavBar isMode={isMode} changeMode={changeMode} />
 			<Routes>
 				<Route path="/*" element={<Home />}/>
-				{/* <Route path="/" element={<Home />}/> */}
+				<Route path="/Home" element={<Home />}/>
+				<Route path="/Skills" element={<Skills />} />
 			</Routes>
 			<Footer />
 		</div>
