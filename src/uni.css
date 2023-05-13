@@ -21,7 +21,7 @@ html{font-size:1rem;scroll-behavior:smooth;font-family: 'Barlow', sans-serif;tex
     body{font-size:0.6rem;}
 }
 
-:root{--main-theme-color:rgb(119, 19, 156);--main-theme-color-a:rgb(119, 19, 156,0.6);}
+:root{--main-theme-color:rgb(119, 19, 156);--main-theme-color-a:rgb(119, 19, 156,0.6);--main-theme-color-aa:rgb(119, 19, 156,0.3);}
 
 a{color:black;text-decoration:none};
 .App.light{color:black;background-color:whitesmoke;transition:all 0.5s ease;}
@@ -55,4 +55,30 @@ a{color:black;text-decoration:none};
 .info-text
 {
     color:inherit;
+}
+
+.theme-button
+{
+    margin:0 0.3rem;
+    padding: 1rem;
+    border-radius:5px;
+    border:2px solid transparent;
+    transition:all 0.5s ease;
+    background-color: var(--main-theme-color);
+    color:white;
+}
+
+.theme-button:hover
+{
+    transform:translateY(-5px);
+}
+
+.light .theme-button:hover
+{
+    border:1px solid black;
+}
+
+.dark .theme-button:hover
+{
+    border:1px solid white;
 }
