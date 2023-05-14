@@ -29,13 +29,11 @@
     transition:0.5s;
     z-index: -1;
     border-radius: 10px;
-    opacity: 0;
 }
 
 .Desc-Wrapper:hover::before
 {
     width: 100%;
-    opacity: 1;
     background-color: var(--main-theme-color-a);
 }
 

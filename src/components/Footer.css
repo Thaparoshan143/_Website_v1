@@ -1,13 +1,13 @@
 
 .Footer
 {
-    width:100vw;
+    width:100%;
     padding:1rem 3rem;
 }
 
 .tempbtn
 {
-    margin:0 0.3rem;
+    margin:0.3rem;
     padding: 1rem;
     border-radius:5px;
     border:none;
@@ -21,13 +21,14 @@
     transform:translateY(-5px);
 }
 
-.Text
+.Text 
 {
-    font-weight:bolder;
+    margin:1rem;
+    padding:0.1rem 0;
 }
 
 .Theme-Text
 {
-    font-size:1.4rem;
+    font-size:1.2rem;
     color:var(--main-theme-color);
 }

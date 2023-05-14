@@ -1,0 +1,126 @@
+.Contact-Wrapper
+{
+    padding:0.1em;
+    width: 100%;
+}
+
+.Contact-Wrapper .titles
+{
+    font-size:3em;
+    text-transform: uppercase;
+    border-bottom:5px solid var(--main-theme-color);
+    margin:2.2em;
+    padding:0.2rem 0.4rem;
+}
+
+.Socials-Cont
+{
+    margin:2rem 0;
+    width:80%;
+}
+
+.Social-Btn
+{
+    font-size:1.5em;
+    padding:1.2rem 1.8rem;
+    text-transform: uppercase;
+    margin:1rem;
+}
+
+.Social-Btn:hover
+{
+    box-shadow:0 0 100px 10px var(--main-theme-color);
+}
+
+.Contact-Wrapper hr
+{
+    width: 80%;
+    border:3px solid var(--main-theme-color);
+    border-radius:5px;
+    margin:3rem;
+}
+
+.Form-Cont
+{
+    margin-bottom:5rem;
+    width: 100%;
+    font-family: 'Teko', sans-serif;
+}
+
+.Form-Cont .Form-Title
+{
+    font-size:3em;
+    text-transform: uppercase;
+    background-color: var(--main-theme-color-a);
+    padding:0.5rem 0.1rem;
+    width:70%;
+    border-radius: 10px;
+    margin-bottom:3rem;
+}
+
+.Form-Row
+{
+    font-size: 1.6em;
+    width: 100%;
+}
+
+.Field-Title
+{
+    font-size:1.5em;
+    color:var(--main-theme-color);
+}
+
+.Form-Cont input,textarea
+{
+    width:12em;
+    padding:0.2em;
+    margin:0.5em;
+    min-height: 1.6em;
+    font-size:1.1em;
+    border:none;
+    font-family: 'Teko', sans-serif;
+    color:var(--main-theme-color);
+    outline-width: 0;
+    transition:0.2s;
+    background-color: transparent;
+    opacity: 0.5;
+}
+
+.Form-Cont textarea[type="text"]
+{
+    max-width:16em;
+    min-width:12em;
+    max-height: 5em;
+}
+
+.Form-Cont .theme-button
+{
+    margin:3rem 0;
+    font-size: 1.8em;
+    border:none;
+}
+
+.Form-Cont .theme-button:hover
+{
+    border:none;
+    letter-spacing: 2px;
+    transform: translateY(0);
+    box-shadow:0 0 100px 10px var(--main-theme-color);
+}
+
+.dark input,.dark textarea[type="text"]
+{
+    border-bottom:2px solid white;
+}
+
+.light input,.light textarea[type="text"]
+{
+    border-bottom:2px solid black;
+}
+
+input:focus, textarea[type="text"]:focus
+{
+    opacity: 1;
+    border-bottom:2px solid var(--main-theme-color);
+}
+
