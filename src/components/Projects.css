@@ -72,3 +72,15 @@
     padding:0.6rem 0.9rem;
     background-color: var(--main-theme-color-a);
 }
+
+.Projects-Cert
+{
+    margin:2rem 0;
+}
+
+.Projects-Cert .Cert-Img
+{
+    height: 16em;
+    width:24em;
+    margin:1rem 0;
+}

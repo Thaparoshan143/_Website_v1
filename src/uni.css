@@ -82,3 +82,19 @@ a{color:black;text-decoration:none};
 {
     border:1px solid white;
 }
+
+.top-button
+{
+    bottom:2rem;
+    right:1rem;
+    position:fixed;
+    border-radius:10px;
+    padding:0.6rem 1rem;
+    opacity: 0.4;
+    z-index: 100;
+}
+
+.top-button:hover
+{
+    opacity: 1;
+}

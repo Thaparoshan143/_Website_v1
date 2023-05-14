@@ -1,14 +1,14 @@
 import React from 'react'
 import "./Skills.css"
 import { useState } from 'react';
-import cBasic from "../image/Cert/C Basic.jpg"
-import cMaster from "../image/Cert/C Master.jpg"
-import cppBasic from "../image/Cert/C++ Basics.jpg"
-import cppMaster from "../image/Cert/C++ Master.jpg"
-import cppOPP from "../image/Cert/C++ OOP.jpg"
-import pythonBasic from "../image/Cert/Python Basics.jpg"
-import pythonMaster from "../image/Cert/Python Master.jpg"
-import pythonBeyBasic from "../image/Cert/Python Beyond Basics.jpg";
+import cBasic from "../image/Prog Cert/C Basic.jpg"
+import cMaster from "../image/Prog Cert/C Master.jpg"
+import cppBasic from "../image/Prog Cert/C++ Basics.jpg"
+import cppMaster from "../image/Prog Cert/C++ Master.jpg"
+import cppOPP from "../image/Prog Cert/C++ OOP.jpg"
+import pythonBasic from "../image/Prog Cert/Python Basics.jpg"
+import pythonMaster from "../image/Prog Cert/Python Master.jpg"
+import pythonBeyBasic from "../image/Prog Cert/Python Beyond Basics.jpg";
 
 
 const cardWrapperTitles=["Programming","3D Artist","Web Development","Game Development","Others"];
@@ -32,6 +32,7 @@ function SkillsWrapper()
             {cardWrapperTitles.map((ctitle,ind)=>(
                 <CardsWrapper key={ctitle} title={ctitle} ind={ind} />
             ))}
+			<a className="theme-button top-button" href="#top">^</a>
         </div>
     )
 }

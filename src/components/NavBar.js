@@ -14,6 +14,7 @@ function NavBar(props)
 
 	return(
 		<nav className="NavBar">
+			<a id="#top" />
 			<NavItems />
 			<button style={btnStyle} className="Mode-Button" onClick={props.changeMode}>{props.isMode?"D":"L"}</button>
 		</nav>
