@@ -5,6 +5,7 @@ import Footer from "./Components/Footer"
 import Home from "./Components/Home"
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
+import KnowMore from './Components/KnowMore';
 import { useState } from 'react';
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
 				<Route path="/Home" element={<Home />}/>
 				<Route path="/Skills" element={<Skills />} />
 				<Route path="/Projects" element={<Projects />} />
+				<Route path="/Know More" element={<KnowMore />} />
 			</Routes>
 			<Footer />
 		</div>

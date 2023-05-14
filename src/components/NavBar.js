@@ -25,7 +25,7 @@ function NavItems()
 	return (
 		<div className="Nav-Items flex-row-evenly">
 			{navItemsTitle.map((val)=>(
-				<NavItem val={val} />
+				<NavItem val={val} key={val} />
 			))}
 		</div>
 	)

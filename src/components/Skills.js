@@ -30,7 +30,7 @@ function SkillsWrapper()
     return (
         <div className="Skills-Cont flex-column-evenly">
             {cardWrapperTitles.map((ctitle,ind)=>(
-                <CardsWrapper title={ctitle} ind={ind} />
+                <CardsWrapper key={ctitle} title={ctitle} ind={ind} />
             ))}
         </div>
     )
@@ -59,7 +59,7 @@ function CertImages(props)
         <>
         <div className="Cert-Cont flex-row-evenly">
             {Cert[props.oind].map((val,ind)=>{
-                return <img className="Cert-Img" src={Cert[props.oind][ind]?Cert[props.oind][ind]:"./notfound"} alt="cert-not-found" />
+                return <img key={val} className="Cert-Img" src={Cert[props.oind][ind]?Cert[props.oind][ind]:"./notfound"} alt="cert-not-found" />
             })}
         </div>
         <span className="titles" style={{fontSize:'1.8rem',margin:'3rem 0'}}>{Cert[props.oind][0]?("Certification count : "+Cert[props.oind].length):"Cert-Not-Found || Count: 0"}</span>
@@ -72,7 +72,7 @@ function Cards(props)
     return (
         <div className="Cards-Cont flex-row-evenly">
             {cardSubTitles[props.ind].map((sTitle,ind)=>(
-                <Card title={sTitle} oind={props.ind} iind={ind} showCert={props.showCert} />
+                <Card key={sTitle} title={sTitle} oind={props.ind} iind={ind} showCert={props.showCert} />
             ))}
         </div>
     )

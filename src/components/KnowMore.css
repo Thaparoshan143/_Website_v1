@@ -1,0 +1,58 @@
+.Know-More-Wrapper
+{
+    padding:0.2rem;
+}
+
+.Know-More-Wrapper .titles
+{
+    font-size:4em;
+    text-transform: uppercase;
+    margin-bottom:1rem;
+}
+
+.Desc-Wrapper
+{
+    padding:2em;
+    margin:1rem 3em;
+    position:relative;
+    isolation: isolate;
+}
+
+.Desc-Wrapper::before
+{
+    position: absolute;
+    content: '';
+    top:0;
+    left:0;
+    width: 0%;
+    height: 100%;
+    transition:0.5s;
+    z-index: -1;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.Desc-Wrapper:hover::before
+{
+    width: 100%;
+    opacity: 1;
+    background-color: var(--main-theme-color-a);
+}
+
+.Desc-Wrapper .Me-Img
+{
+    border-radius: 50%;
+    height: 20em;
+    margin-bottom:1rem;
+    margin-right:3em;
+}
+
+.Know-More-Wrapper .Description
+{
+    /* margin-left:3em; */
+    font-size:1.5em;
+    text-align: justify;
+    word-spacing: 2px;
+}
+
+
