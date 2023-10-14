@@ -5,18 +5,19 @@
     padding:1rem 3rem;
 }
 
-.tempbtn
+.Social-Btnf
 {
-    margin:0.3rem;
-    padding: 1rem;
+    margin:0 0.4rem;
+    padding: 0.4rem;
     border-radius:5px;
     border:none;
     transition:all 0.5s ease;
     background-color: var(--main-theme-color);
     color:white;
+    cursor: pointer;
 }
 
-.tempbtn:hover
+.Social-Btnf:hover
 {
     transform:translateY(-5px);
 }

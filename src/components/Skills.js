@@ -9,12 +9,12 @@ import cppOPP from "../image/Prog Cert/C++ OOP.jpg";
 import pythonBasic from "../image/Prog Cert/Python Basics.jpg";
 import pythonMaster from "../image/Prog Cert/Python Master.jpg";
 import pythonBeyBasic from "../image/Prog Cert/Python Beyond Basics.jpg";
+import { MajorSkills } from '../Info';
 
+// This is just for progress bar temporary
+const skillProgress=[[80,80,50,50],[90,80,50,70],[60,20],[50],[10]];
 
-const cardWrapperTitles=["Programming","3D Artist","Web Development","Game Development","Others"];
-const cardSubTitles=[["C","C++","Python","C#"],["Blender","Autodesk Maya"],["HTML","CSS","JS","React JS"],["Unity"],["PhotoShop"]];
-const skillProgress=[[80,80,50,50],[60,20],[90,80,50,70],[50],[10]];
-
+// aligning the array of images containing certificates of programming
 const Cert=[[cBasic,cMaster],[cppBasic,cppMaster,cppOPP],[pythonBasic,pythonMaster,pythonBeyBasic],[""]];
 
 function Skills() {
@@ -29,15 +29,16 @@ function SkillsWrapper()
 {
     return (
         <div className="Skills-Cont flex-column-evenly">
-            {cardWrapperTitles.map((ctitle,ind)=>(
-                <CardsWrapper key={ctitle} title={ctitle} ind={ind} />
+            {MajorSkills.map(({field, subItem}, oind)=>(
+                // console.log(field + "\n" + subItem + "\n" + ind)
+                <CardsWrapper key={field} field={field} subItem={subItem} oind={oind}/>
             ))}
 			<a className="theme-button top-button" href="#top">^</a>
         </div>
     )
 }
 
-function CardsWrapper(props)
+function CardsWrapper({field, subItem, oind})
 {
     const [currHovIndex,setCurrHovIndex]=useState(0);
     function showCert(index)
@@ -47,50 +48,51 @@ function CardsWrapper(props)
 
     return (
         <div className="Cards-Wrapper flex-column-evenly">
-            <span className="Cards-Title titles pseudo-underline">{props.title}</span>
-            <Cards ind={props.ind} showCert={showCert}/>
-            {props.ind===0?(<CertImages oind={currHovIndex} />):""}
+            <span className="Cards-Title titles pseudo-underline">{field}</span>
+            <Cards subItem={subItem} oind={oind} showCert={showCert}/>
+            {oind===0?(<CertImages oind={currHovIndex} />):""}
         </div>
     )
 }
 
-function CertImages(props)
-{
-    return (
-        <>
-        <div className="Cert-Cont flex-row-evenly">
-            {Cert[props.oind].map((val,ind)=>{
-                return <img key={val} className="Cert-Img" src={Cert[props.oind][ind]?Cert[props.oind][ind]:"./notfound"} alt="cert-not-found" />
-            })}
-        </div>
-        <span className="titles" style={{fontSize:'1.8rem',margin:'3rem 0'}}>{Cert[props.oind][0]?("Certification count : "+Cert[props.oind].length):"Cert-Not-Found || Count: 0"}</span>
-        </>
-    )
-}
-
-function Cards(props)
+function Cards({subItem, oind, showCert})
 {
     return (
         <div className="Cards-Cont flex-row-evenly">
-            {cardSubTitles[props.ind].map((sTitle,ind)=>(
-                <Card key={sTitle} title={sTitle} oind={props.ind} iind={ind} showCert={props.showCert} />
+            {subItem.map(({item, level}, ind)=>(
+                <Card key={item} title={item} oind={oind} iind={ind} showCert={showCert} level={level} />
             ))}
         </div>
     )
 }
 
-function Card(props)
+function Card({title, oind, iind, showCert, level})
 {
-    const progressStyle={width:`${skillProgress[props.oind][props.iind]}%`};
+    const progressStyle={width:`${skillProgress[oind][iind]}%`};
     return (
-        <div className="Card flex-column-evenly" onMouseOver={()=>props.showCert(props.iind)}>
-            <span className="Card-Title">{props.title}</span>
+        <div className="Card flex-column-evenly" onMouseOver={()=>showCert(iind)}>
+            <span className="Card-Title">{title}</span>
             <div className="Skill-Pro-Cont">
-                <span className="info-text">EXPERIENCE</span>
+                {/* <span className="info-text">EXPERIENCE</span><br /><hr style={{margin:"1rem"}}/> */}
+                <span className="info-text">{level}</span>
                 <div className="Progress-Cont"><div className="Progress" style={progressStyle}></div></div>
             </div>
         </div>
     )
 }
 
-export default Skills
+function CertImages({oind})
+{
+    return (
+        <>
+        <div className="Cert-Cont flex-row-evenly">
+            {Cert[oind].map((val,ind)=>{
+                return <img key={val} className="Cert-Img" src={Cert[oind][ind]?Cert[oind][ind]:"./notfound"} alt="cert-not-found" />
+            })}
+        </div>
+        <span className="titles" style={{fontSize:'1.8rem',margin:'3rem 0'}}>{Cert[oind][0]?("Certification count : "+Cert[oind].length):"Cert-Not-Found || Count: 0"}</span>
+        </>
+    )
+}
+
+export default Skills;

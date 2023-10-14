@@ -1,8 +1,6 @@
 import React from 'react';
 import "./GetInTouch.css";
-
-const socialLinks=["https://github.com/Thaparoshan143","https://www.linkedin.com/in/roshan-thapa-294498251/","https://www.youtube.com/channel/UCgcp2_YxezJh71hxvcb_CWw","https://www.facebook.com/Me-in-Unity-102966158048488/"];
-const socialNames=["GitHub","LinkedIn","Youtube","Facebook"];
+import { SocialHandles } from "../Info"
 
 function GetInTouch() {
     function callContact()
@@ -14,9 +12,9 @@ function GetInTouch() {
     <div className="Contact-Wrapper flex-column-evenly">
         <span className="titles">Get In Touch</span>
         <div className="Socials-Cont flex-row-evenly">
-            {socialLinks.map((link,ind)=>
+            {SocialHandles.map(({media, url},ind)=>
                 {
-                    return <a className="theme-button Social-Btn" href={link} rel="noreferrer" target="_blank">{socialNames[ind]}</a>
+                    return <a className="theme-button Social-Btn" href={url} rel="noreferrer" target="_blank">{media}</a>
                 })}
         </div>
         <hr />
