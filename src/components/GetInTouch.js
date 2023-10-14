@@ -1,13 +1,13 @@
-import React from 'react'
-import "./GetInTouch.css"
+import React from 'react';
+import "./GetInTouch.css";
 
 const socialLinks=["https://github.com/Thaparoshan143","https://www.linkedin.com/in/roshan-thapa-294498251/","https://www.youtube.com/channel/UCgcp2_YxezJh71hxvcb_CWw","https://www.facebook.com/Me-in-Unity-102966158048488/"];
-const socialNames=["GitHub","LinkedIn","Youtube","Facebook"]
+const socialNames=["GitHub","LinkedIn","Youtube","Facebook"];
 
 function GetInTouch() {
     function callContact()
     {
-        {alert("Not connected yet ! Redirecting to mail");}
+        alert("Not connected yet ! Redirecting to mail");
     }
     
   return (
@@ -16,7 +16,7 @@ function GetInTouch() {
         <div className="Socials-Cont flex-row-evenly">
             {socialLinks.map((link,ind)=>
                 {
-                    return <a className="theme-button Social-Btn" href={link} target="_blank">{socialNames[ind]}</a>
+                    return <a className="theme-button Social-Btn" href={link} rel="noreferrer" target="_blank">{socialNames[ind]}</a>
                 })}
         </div>
         <hr />

@@ -1,9 +1,9 @@
-import React from 'react'
-import "./Projects.css"
-import "../uni.css"
-import JSQSXJ from "../image/Proj Cert/Joint Quiz SXJ.jpg"
-import USQSXJ from "../image/Proj Cert/Unity Quiz SXJ.jpg"
-import SFSXJ from "../image/Proj Cert/Science Fair SXJ.jpg"
+import React from 'react';
+import "./Projects.css";
+import "../uni.css";
+import JSQSXJ from "../image/Proj Cert/Joint Quiz SXJ.jpg";
+import USQSXJ from "../image/Proj Cert/Unity Quiz SXJ.jpg";
+import SFSXJ from "../image/Proj Cert/Science Fair SXJ.jpg";
 
 
 const projectsTitle=["Web Programs","Software/App","Programs","Utility Programs","3D Modeling/Game Development"];
@@ -84,7 +84,7 @@ function Card(props)
                 }):""}
             </div>
             <span className="Description">{description?description:"Description Missing"}</span>
-            <a className="Project-Button theme-button" target="_blank" href={srcLink}>View Source..</a>
+            <a className="Project-Button theme-button" rel="noreferrer" target="_blank" href={srcLink}>View Source..</a>
         </div>
     )
 }

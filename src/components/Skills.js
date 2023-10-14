@@ -1,13 +1,13 @@
-import React from 'react'
-import "./Skills.css"
+import React from 'react';
+import "./Skills.css";
 import { useState } from 'react';
-import cBasic from "../image/Prog Cert/C Basic.jpg"
-import cMaster from "../image/Prog Cert/C Master.jpg"
-import cppBasic from "../image/Prog Cert/C++ Basics.jpg"
-import cppMaster from "../image/Prog Cert/C++ Master.jpg"
-import cppOPP from "../image/Prog Cert/C++ OOP.jpg"
-import pythonBasic from "../image/Prog Cert/Python Basics.jpg"
-import pythonMaster from "../image/Prog Cert/Python Master.jpg"
+import cBasic from "../image/Prog Cert/C Basic.jpg";
+import cMaster from "../image/Prog Cert/C Master.jpg";
+import cppBasic from "../image/Prog Cert/C++ Basics.jpg";
+import cppMaster from "../image/Prog Cert/C++ Master.jpg";
+import cppOPP from "../image/Prog Cert/C++ OOP.jpg";
+import pythonBasic from "../image/Prog Cert/Python Basics.jpg";
+import pythonMaster from "../image/Prog Cert/Python Master.jpg";
 import pythonBeyBasic from "../image/Prog Cert/Python Beyond Basics.jpg";
 
 

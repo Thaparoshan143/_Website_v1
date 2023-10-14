@@ -1,5 +1,5 @@
-import "../uni.css"
-import "./NavBar.css"
+import "../uni.css";
+import "./NavBar.css";
 import { NavLink } from "react-router-dom";
 
 // Page name or link name will be same as it

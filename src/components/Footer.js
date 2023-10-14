@@ -1,5 +1,5 @@
-import "../uni.css"
-import "./Footer.css"
+import "../uni.css";
+import "./Footer.css";
 
 const socialsHandle=["F","G","YT","Lin"];
 

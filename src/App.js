@@ -1,12 +1,12 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import NavBar from "./Components/NavBar";
-import Footer from "./Components/Footer"
-import Home from "./Components/Home"
+import Footer from "./Components/Footer";
+import Home from "./Components/Home";
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
 import KnowMore from './Components/KnowMore';
-import GetInTouch from "./Components/GetInTouch"
+import GetInTouch from "./Components/GetInTouch";
 import { useState } from 'react';
 
 function App() {
